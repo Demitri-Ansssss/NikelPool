@@ -148,12 +148,12 @@ npm install
 
 Proses seeding di atas secara otomatis membuat beberapa akun dengan peran (role) yang berbeda untuk memudahkan Anda menguji seluruh alur sistem:
 
-| Peran (Role)                     | Email Login              | Password   | Akses Portal                     |
-| :------------------------------- | :----------------------- | :--------- | :------------------------------- |
-| **Super Admin / Admin Pool**     | `admin@nikelpool.com`    | `password` | `/admin` (Filament Admin Panel)  |
-| **Approver 1 (Atasan Langsung)** | `approver@nikelpool.com` | `password` | `/dashboard` (User Portal React) |
-| **Approver 2 (Kepala Bagian)**   | `kabag@nikelpool.com`    | `password` | `/dashboard` (User Portal React) |
-| **Karyawan / User 1**            | `user1@nikelpool.com`    | `password` | `/dashboard` (User Portal React) |
+| Peran (Role)                   | Email Login           | Password   | Akses Portal                     |
+| :----------------------------- | :-------------------- | :--------- | :------------------------------- |
+| **Super Admin / Admin Pool**   | `admin@nikelpool.com` | `password` | `/admin` (Filament Admin Panel)  |
+| **Approver 1 (Kepala Seksi)**  | `kasie@nikelpool.com` | `password` | `/dashboard` (User Portal React) |
+| **Approver 2 (Kepala Bagian)** | `kabag@nikelpool.com` | `password` | `/dashboard` (User Portal React) |
+| **Karyawan / User 1**          | `user1@nikelpool.com` | `password` | `/dashboard` (User Portal React) |
 
 ---
 
