@@ -119,7 +119,7 @@ DB_HOST=127.0.0.1
 DB_PORT=5432
 DB_DATABASE=nikelpool
 DB_USERNAME=postgres    # Sesuaikan dengan username postgres Anda
-DB_PASSWORD=rahasia     # Sesuaikan dengan password postgres Anda
+DB_PASSWORD=            # Sesuaikan dengan password postgres Anda
 ```
 
 ### 3. Instalasi Dependensi & Kredensial Database
