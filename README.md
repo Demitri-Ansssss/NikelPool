@@ -200,4 +200,14 @@ _(Vite akan memantau perubahan file React/Tailwind secara real-time)_
 
 ---
 
+## 🖥️ Tambahan
+
+Jika tidak bisa masuk kedalam admin panel ada beberapa step yang bisa dilakukan untuk mengakses admin panel
+
+1. php artisan cache:clear
+2. php artisan permission:cache-reset
+3. lalu lakukan refresh halaman admin panel
+
+kenapa itu bisa terjadi dikarenakan setiap melakukan "php artisan migrate:fresh --seed" yang menghapus dan membuat ulang seluruh tabel database, dan dikarenakan saya mengunakan "spatie/laravel-permission" yang didesain menyimpan cache role dan permission.
+
 **© 2026 NikelPool Mining Fleet Management System. All rights reserved.**
