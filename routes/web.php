@@ -7,9 +7,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\ReportController;
 
-Route::inertia('/', 'welcome', [
-    'canRegister' => Features::enabled(Features::registration()),
-])->name('home');
+Route::redirect('/', '/login')->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');
@@ -33,4 +31,4 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('reports', [ReportController::class, 'index'])->name('reports.index');
     Route::get('reports/export', [ReportController::class, 'export'])->name('reports.export');
 });
-require __DIR__.'/settings.php';
+require __DIR__ . '/settings.php';

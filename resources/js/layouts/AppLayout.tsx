@@ -9,12 +9,15 @@ interface Props {
 export default function AppLayout({ children, title }: Props) {
     const { auth } = usePage().props as any;
 
+    const userRoles = auth?.roles || [];
+    const hasRole = (role: string) => userRoles.includes(role);
+
     const navLinks = [
-        { href: '/dashboard', label: 'Dashboard', icon: '📊' },
-        { href: '/bookings', label: 'Pemesanan', icon: '🚗' },
-        { href: '/approvals', label: 'Persetujuan', icon: '✅' },
-        { href: '/reports', label: 'Laporan', icon: '📋' },
-    ];
+        { href: '/dashboard', label: 'Dashboard', icon: '📊', show: true },
+        { href: '/bookings', label: 'Pemesanan', icon: '🚗', show: true },
+        { href: '/approvals', label: 'Persetujuan', icon: '✅', show: hasRole('admin') || hasRole('approver') },
+        { href: '/reports', label: 'Laporan', icon: '📋', show: hasRole('admin') },
+    ].filter(link => link.show);
 
     return (
         <div className="flex min-h-screen bg-gray-950 text-gray-100">
